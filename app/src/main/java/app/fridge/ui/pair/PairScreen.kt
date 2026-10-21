@@ -104,7 +104,7 @@ fun PairScreen(settings: FridgeSettings, onBack: () -> Unit) {
                     Text(stringResource(R.string.pair_privacy), style = t.label, color = p.faint)
                 }
                 Mode.SHOW -> Show(settings, onBack)
-                Mode.SCANNED -> Done(stringResource(R.string.pair_scanned, settings.partnerName.ifBlank { stringResource(R.string.them) }), onBack)
+                Mode.SCANNED -> Done(stringResource(R.string.pair_scanned, settings.partnerName.ifBlank { stringResource(R.string.them) }), settings, onBack)
             }
         }
     }
@@ -119,7 +119,7 @@ private fun Show(settings: FridgeSettings, onBack: () -> Unit) {
         settings.secret?.let { qr(Invite(it, settings.deviceId, settings.myName).encode(), 720) }
     }
     if (settings.paired) {
-        Done(stringResource(R.string.pair_met, settings.partnerName.ifBlank { stringResource(R.string.them) }), onBack)
+        Done(stringResource(R.string.pair_met, settings.partnerName.ifBlank { stringResource(R.string.them) }), settings, onBack)
         return
     }
     Text(stringResource(R.string.pair_show_how), style = t.body, color = p.muted)
@@ -141,7 +141,7 @@ private fun Show(settings: FridgeSettings, onBack: () -> Unit) {
 }
 
 @Composable
-private fun Done(text: String, onBack: () -> Unit) {
+private fun Done(text: String, settings: FridgeSettings, onBack: () -> Unit) {
     val p = LocalPalette.current
     Spacer(Modifier.height(30.dp))
     Row(horizontalArrangement = Arrangement.Center) {
@@ -153,7 +153,9 @@ private fun Done(text: String, onBack: () -> Unit) {
     Text(text, style = LocalType.current.title, color = p.ink)
     Spacer(Modifier.height(8.dp))
     Text(stringResource(R.string.pair_after), style = LocalType.current.body, color = p.muted)
-    Spacer(Modifier.height(24.dp))
+    Spacer(Modifier.height(22.dp))
+    HumQuestion(settings)
+    Spacer(Modifier.height(22.dp))
     InkButton(stringResource(R.string.to_door), onClick = onBack)
 }
 

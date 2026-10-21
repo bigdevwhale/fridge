@@ -28,6 +28,10 @@ data class FridgeSettings(
     /** Keep listening for the other phone at home with the app closed. */
     val hum: Boolean = false,
     val lastMet: Long = 0,
+    /** Networks where the two phones have met (see [app.fridge.sync.HomeNet]): home, as far as the fridge knows. */
+    val homes: Set<String> = emptySet(),
+    /** The "listen in the background?" question after pairing has been answered, one way or the other. */
+    val humAsked: Boolean = false,
 ) {
     val paired: Boolean get() = secret != null && partnerId.isNotEmpty()
     val waiting: Boolean get() = secret != null && partnerId.isEmpty()
@@ -35,9 +39,9 @@ data class FridgeSettings(
     // The secret is a ByteArray: compare it by content, and keep it out of toString.
     override fun equals(other: Any?): Boolean = other is FridgeSettings && onboarded == other.onboarded && deviceId == other.deviceId &&
         myName == other.myName && partnerId == other.partnerId && partnerName == other.partnerName &&
-        secret.contentEquals(other.secret) && hum == other.hum && lastMet == other.lastMet
+        secret.contentEquals(other.secret) && hum == other.hum && lastMet == other.lastMet && homes == other.homes && humAsked == other.humAsked
 
-    override fun hashCode(): Int = listOf(deviceId, myName, partnerId, partnerName, hum, lastMet).hashCode() * 31 + secret.contentHashCode()
+    override fun hashCode(): Int = listOf(deviceId, myName, partnerId, partnerName, hum, lastMet, homes, humAsked).hashCode() * 31 + secret.contentHashCode()
 
     override fun toString(): String = "FridgeSettings(me=$myName/$deviceId, partner=$partnerName/$partnerId, paired=$paired, hum=$hum)"
 }
@@ -53,6 +57,8 @@ class SettingsStore(context: Context, file: String = "settings") {
     private val secretKey = stringPreferencesKey("secret")
     private val humKey = booleanPreferencesKey("hum")
     private val lastMetKey = longPreferencesKey("lastMet")
+    private val homesKey = stringPreferencesKey("homes")
+    private val humAskedKey = booleanPreferencesKey("humAsked")
 
     val settings: Flow<FridgeSettings> = store.data.map { p ->
         FridgeSettings(
@@ -64,6 +70,8 @@ class SettingsStore(context: Context, file: String = "settings") {
             secret = p[secretKey]?.let { Base64.decode(it, Base64.NO_WRAP) },
             hum = p[humKey] ?: false,
             lastMet = p[lastMetKey] ?: 0,
+            homes = (p[homesKey] ?: "").split("|").filter { it.isNotBlank() }.toSet(),
+            humAsked = p[humAskedKey] ?: false,
         )
     }
 
@@ -106,9 +114,22 @@ class SettingsStore(context: Context, file: String = "settings") {
         it.remove(partnerIdKey)
         it.remove(partnerNameKey)
         it[humKey] = false
+        it.remove(homesKey)
+        it.remove(humAskedKey)
     }
 
     suspend fun setHum(on: Boolean) = store.edit { it[humKey] = on }
 
     suspend fun met(at: Long) = store.edit { it[lastMetKey] = at }
+
+    /** Remembers a network where the two phones met; the last four are kept (a home, a dacha, the parents'…). */
+    suspend fun rememberHome(fingerprint: String) = store.edit {
+        val homes = (it[homesKey] ?: "").split("|").filter { h -> h.isNotBlank() && h != fingerprint }
+        it[homesKey] = (listOf(fingerprint) + homes).take(4).joinToString("|")
+    }
+
+    suspend fun answerHum(on: Boolean) = store.edit {
+        it[humAskedKey] = true
+        it[humKey] = on
+    }
 }

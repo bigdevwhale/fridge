@@ -12,6 +12,7 @@ import app.fridge.data.DemoSeed
 import app.fridge.data.FridgeDatabase
 import app.fridge.data.SettingsStore
 import app.fridge.domain.Door
+import app.fridge.sync.HomeNet
 import app.fridge.sync.Hum
 import app.fridge.sync.HumService
 import app.fridge.sync.LanFinder
@@ -30,6 +31,7 @@ class AppContainer(val context: Context, lan: Boolean = true) {
     val hum = Hum(settings, db.dao(), scope, if (lan) LanFinder(context) else null)
     val door = Door(db.dao(), settings).also { it.onChange = hum::push }
     val news = News(context)
+    val homeNet = HomeNet(context)
 
     /** True while the app is on screen: news from the other phone is then on the door, not in a notification. */
     @Volatile var visible = false
@@ -48,6 +50,7 @@ class FridgeApp : Application() {
         super.onCreate()
         val c = AppContainer(this)
         container = c
+        c.hum.onMet = { c.homeNet.here.value?.let { home -> c.scope.launch { c.settings.rememberHome(home) } } }
         c.hum.onNews = { items -> if (!c.visible) c.scope.launch { c.news.show(items, c.settings.now()) } }
         c.scope.launch {
             c.settings.deviceId()

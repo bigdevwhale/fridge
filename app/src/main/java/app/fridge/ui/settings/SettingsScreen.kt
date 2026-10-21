@@ -54,6 +54,7 @@ import app.fridge.ui.components.Paper
 import app.fridge.ui.components.QuietButton
 import app.fridge.ui.components.SectionTitle
 import app.fridge.ui.components.TopBar
+import app.fridge.ui.pair.KeepAwake
 import app.fridge.ui.theme.LocalPalette
 import app.fridge.ui.theme.LocalType
 import kotlinx.coroutines.Dispatchers
@@ -147,6 +148,7 @@ fun SettingsScreen(settings: FridgeSettings, onBack: () -> Unit, onPair: () -> U
                         colors = SwitchDefaults.colors(checkedTrackColor = p.magnetGreen),
                     )
                 }
+                if (settings.hum) KeepAwake()
 
                 SectionTitle(stringResource(R.string.set_parcel), stringResource(R.string.set_parcel_sub))
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {

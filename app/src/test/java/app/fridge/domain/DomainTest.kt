@@ -4,6 +4,7 @@ import app.fridge.data.FridgeSettings
 import app.fridge.data.Item
 import app.fridge.data.Kind
 import app.fridge.data.Stamp
+import app.fridge.sync.HomeNet
 import app.fridge.sync.Merge
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
@@ -100,6 +101,15 @@ class DomainTest {
             item("l4", Kind.CHORE_LOG, "them") { it.copy(day = 40) },
         )
         assertEquals(mapOf("me" to 2, "them" to 1), Chores.balance(logs, 1, 31))
+    }
+
+    @Test
+    fun `a network is known by its own part of the address`() {
+        fun ip(vararg b: Int) = b.map { it.toByte() }.toByteArray()
+        assertEquals("192.168.31.0", HomeNet.network(ip(192, 168, 31, 24), 24))
+        assertEquals("192.168.31.0", HomeNet.network(ip(192, 168, 31, 177), 24))
+        assertEquals("10.0.0.0", HomeNet.network(ip(10, 1, 2, 3), 8))
+        assertEquals("0.0.0.0", HomeNet.network(ip(10, 1, 2, 3), 0))
     }
 
     @Test

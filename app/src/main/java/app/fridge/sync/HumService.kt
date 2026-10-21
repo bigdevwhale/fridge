@@ -1,5 +1,6 @@
 package app.fridge.sync
 
+import android.app.Notification
 import android.app.Service
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -12,42 +13,69 @@ import androidx.core.content.ContextCompat
 import app.fridge.R
 import app.fridge.container
 import app.fridge.localized
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.cancel
+import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 
 /**
  * The fridge humming with the app closed: a quiet foreground service that keeps listening for the
  * other phone, so whatever they hung on the door is already here when you look. Only when the
- * person turned it on, and only while paired.
+ * person turned it on, only while paired — and only at home: on a network where the two phones
+ * have met before. Anywhere else it sleeps (until the two have met somewhere, any Wi-Fi will do).
  */
 class HumService : Service() {
+    private var scope: CoroutineScope? = null
+
     override fun onBind(intent: Intent?): IBinder? = null
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         val c = container
         c.news.channels()
-        val l = localized()
-        val n = NotificationCompat.Builder(this, News.HUM)
-            .setSmallIcon(R.drawable.ic_stat_magnet)
-            .setContentTitle(l.getString(R.string.hum_title))
-            .setContentText(l.getString(R.string.hum_text))
-            .setContentIntent(c.news.open())
-            .setOngoing(true)
-            .setSilent(true)
-            .setPriority(NotificationCompat.PRIORITY_MIN)
-            .build()
         val started = runCatching {
-            ServiceCompat.startForeground(this, News.HUM_ID, n, ServiceInfo.FOREGROUND_SERVICE_TYPE_CONNECTED_DEVICE)
+            ServiceCompat.startForeground(this, News.HUM_ID, note(home = true), ServiceInfo.FOREGROUND_SERVICE_TYPE_CONNECTED_DEVICE)
         }.isSuccess
         if (!started) {
             stopSelf()
             return START_NOT_STICKY
         }
-        c.hum.start("service")
+        if (scope == null) {
+            val s = CoroutineScope(SupervisorJob() + Dispatchers.Default)
+            scope = s
+            s.launch {
+                c.homeNet.here.combine(c.settings.settings.map { it.homes }) { here, homes ->
+                    here != null && (homes.isEmpty() || here in homes)
+                }.distinctUntilChanged().collect { home ->
+                    if (home) c.hum.start("service") else c.hum.stop("service")
+                    // Starting foreground again with a new notification just updates the one shown.
+                    runCatching { ServiceCompat.startForeground(this@HumService, News.HUM_ID, note(home), ServiceInfo.FOREGROUND_SERVICE_TYPE_CONNECTED_DEVICE) }
+                }
+            }
+        }
         return START_STICKY
     }
 
+    private fun note(home: Boolean): Notification {
+        val l = localized()
+        return NotificationCompat.Builder(this, News.HUM)
+            .setSmallIcon(R.drawable.ic_stat_magnet)
+            .setContentTitle(l.getString(if (home) R.string.hum_title else R.string.hum_title_away))
+            .setContentText(l.getString(if (home) R.string.hum_text else R.string.hum_text_away))
+            .setContentIntent(container.news.open())
+            .setOngoing(true)
+            .setSilent(true)
+            .setPriority(NotificationCompat.PRIORITY_MIN)
+            .build()
+    }
+
     override fun onDestroy() {
+        scope?.cancel()
+        scope = null
         container.hum.stop("service")
         super.onDestroy()
     }

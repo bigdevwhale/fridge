@@ -68,6 +68,9 @@ class Hum(
     /** Called with what arrived from the other phone and was new here. */
     var onNews: (List<Item>) -> Unit = {}
 
+    /** Called each time the two phones find each other: wherever this is, it's home. */
+    var onMet: () -> Unit = {}
+
     private val reasons = mutableSetOf<String>()
     private var running: Job? = null
     private var runningSecret: ByteArray? = null
@@ -198,6 +201,7 @@ class Hum(
             socket.soTimeout = IDLE_MS
             _near.update { it.copy(together = true) }
             settings.met(System.currentTimeMillis())
+            onMet()
 
             val theirs = parseInventory(hello.optJSONObject("inv"))
             session.sendItems(Merge.missing(dao.everything(), theirs))

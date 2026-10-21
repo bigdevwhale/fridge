@@ -191,7 +191,7 @@
     <string name="forget_title">Забыть второй телефон?</string>
     <string name="forget_text">Всё на дверце останется, но между телефонами ничего не будет переезжать, пока вы не познакомите их снова.</string>
     <string name="set_hum">Гудеть в фоне</string>
-    <string name="set_hum_sub">Холодильник слушает второй телефон дома, даже когда приложение закрыто: записки уже здесь, когда вы посмотрите, и приходит тихое уведомление. Тратит немного батареи.</string>
+    <string name="set_hum_sub">Холодильник слушает второй телефон дома, даже когда приложение закрыто: записки уже здесь, когда вы посмотрите, и приходит тихое уведомление. Дом — любая сеть, где ваши телефоны встречались; в других местах он спит.</string>
     <string name="set_hum_switch">Слушать дома</string>
     <string name="set_parcel">Посылка</string>
     <string name="set_parcel_sub">Если вы порознь: вся дверца одним зашифрованным файлом. Отправьте через любой мессенджер; открыть его сможет только второй телефон.</string>
@@ -222,6 +222,14 @@
     <string name="channel_news">Новое на двери</string>
     <string name="hum_title">Холодильник гудит</string>
     <string name="hum_text">Слушает второй телефон дома</string>
+    <string name="hum_title_away">Холодильник притих</string>
+    <string name="hum_text_away">Вы не дома: снова начнёт слушать в домашней Wi-Fi сети</string>
+    <string name="hum_ask">Слушать дома в фоне?</string>
+    <string name="hum_ask_sub">Тогда приложение не нужно открывать: дома телефоны сами находят друг друга, а новое приходит тихим уведомлением. Дом — это сеть, где ваши телефоны уже встречались; в других местах холодильник спит.</string>
+    <string name="hum_ask_yes">Да, слушать дома</string>
+    <string name="hum_ask_no">Только когда приложение открыто</string>
+    <string name="keep_awake_sub">Этот телефон может усыплять холодильник ради батареи, и тогда ничего не придёт, пока не откроете приложение.</string>
+    <string name="keep_awake">Не усыплять</string>
     <string name="news_title">%1$s: новое на двери</string>
     <string name="news_note">записка</string>
     <string name="news_worry">что-то лицом вниз</string>

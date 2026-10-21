@@ -191,7 +191,7 @@
     <string name="forget_title">Forget the other phone?</string>
     <string name="forget_text">Everything stays on this door, but nothing will travel between the phones until you pair them again.</string>
     <string name="set_hum">Hum in the background</string>
-    <string name="set_hum_sub">Keeps listening for the other phone at home with the app closed, so their notes are already here when you look, with a quiet notification. Uses a little battery.</string>
+    <string name="set_hum_sub">Keeps listening for the other phone at home with the app closed, so their notes are already here when you look, with a quiet notification. Home is any network where your phones have met; elsewhere it sleeps.</string>
     <string name="set_hum_switch">Listen at home</string>
     <string name="set_parcel">A parcel</string>
     <string name="set_parcel_sub">For when you\'re apart: the whole door as one encrypted file. Send it through any messenger; only the other phone can open it.</string>
@@ -222,6 +222,14 @@
     <string name="channel_news">New on the door</string>
     <string name="hum_title">The fridge is humming</string>
     <string name="hum_text">Listening for the other phone at home</string>
+    <string name="hum_title_away">The fridge is quiet</string>
+    <string name="hum_text_away">Away from home: it will listen again on your home Wi-Fi</string>
+    <string name="hum_ask">Listen at home in the background?</string>
+    <string name="hum_ask_sub">Then the app doesn\'t need to be open: at home the phones find each other on their own, and new things arrive with a quiet notification. Home is a network where your phones have met; elsewhere the fridge sleeps.</string>
+    <string name="hum_ask_yes">Yes, listen at home</string>
+    <string name="hum_ask_no">Only while the app is open</string>
+    <string name="keep_awake_sub">This phone may put the fridge to sleep to save battery, and then nothing arrives until you open the app.</string>
+    <string name="keep_awake">Don\'t let it sleep</string>
     <string name="news_title">On the door from %1$s</string>
     <string name="news_note">a note</string>
     <string name="news_worry">something face down</string>

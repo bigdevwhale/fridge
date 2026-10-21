@@ -49,7 +49,10 @@ Notes curl at the corner after a week on the door and yellow after a month. Pull
 1. **Pairing, once.** One phone shows a QR code and the other scans it. The code holds a 32-byte secret that only these two phones know.
 2. **At home, by themselves.** Each phone calls out on the local network (mDNS plus a UDP broadcast, because routers differ) with a tag derived from the secret. When they find each other they open one TCP conversation, sealed with AES-GCM under the shared key, and swap whatever the other is missing.
 3. **Live while together.** As long as the app is open on both phones, everything hung on one door appears on the other at once. A green lamp above the fridge shows it.
-4. **In the background, if you like.** *Hum in the background* keeps listening at home with the app closed, so their notes are already there when you look, with a quiet notification.
+4. **In the background, at home.** Right after pairing the app asks whether to listen at home in the background (yes is the default). With the app closed on both phones, they still find each other at home, and new things arrive with a quiet notification. In testing, an edit arrived 3 seconds after the second phone came back onto the home Wi-Fi.
+   - **"Home" is a network where the two phones have already met.** The phone remembers the router's address and the network's address, not the Wi-Fi name (Android ties names to the location permission) and never the location.
+   - Elsewhere, on mobile data or at work, the background hum sleeps. An open app looks for the other phone on any network.
+   - A **"Don't let it sleep"** button asks phones that freeze apps (Xiaomi and others) to leave the fridge alone.
 5. **Apart for a while.** *Send a parcel* packs the whole door into one encrypted file. Send it through any messenger or Quick Share, and only the other phone can open it.
 
 Every edit carries a Lamport version, so the later edit wins wherever it was made. Removals travel as tombstones, and nothing is lost when both phones change things apart.
