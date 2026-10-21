@@ -227,7 +227,8 @@ fun Hideout(state: DoorState, open: (Sheet) -> Unit) {
     val p = LocalPalette.current
     val b = state.board
     val theirs = b.wishes.count { it.author != b.me }
-    Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) {
+    // On the left: the corner on the right belongs to the round "+" magnet.
+    Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Start) {
         Row(
             Modifier
                 .rotate(-3f)
