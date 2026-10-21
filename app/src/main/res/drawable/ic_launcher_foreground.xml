@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A cream fridge with a chrome handle, a note under a red magnet: inside the 66dp safe zone. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- body -->
+    <path
+        android:fillColor="#F5F0E5"
+        android:pathData="M38,24 L70,24 A8,8 0 0 1 78,32 L78,80 A6,6 0 0 1 72,86 L36,86 A6,6 0 0 1 30,80 L30,32 A8,8 0 0 1 38,24 Z" />
+    <!-- shade on the right -->
+    <path
+        android:fillColor="#E3DAC8"
+        android:pathData="M72,24.6 A8,8 0 0 1 78,32 L78,80 A6,6 0 0 1 72,86 Z" />
+    <!-- seam between freezer and door -->
+    <path
+        android:fillColor="#C9BEA9"
+        android:pathData="M30,44 L78,44 L78,46 L30,46 Z" />
+    <!-- chrome handles -->
+    <path
+        android:fillColor="#8C959C"
+        android:pathData="M70,30 L73,30 L73,40 L70,40 Z M70,51 L73,51 L73,68 L70,68 Z" />
+    <!-- the note -->
+    <path
+        android:fillColor="#FBE7A1"
+        android:pathData="M38,54 L58,52 L60,72 L40,74 Z" />
+    <path
+        android:fillColor="#2C4A8C"
+        android:pathData="M42,61 L55,59.7 L55.1,60.9 L42.1,62.2 Z M42.6,66 L53,65 L53.1,66.2 L42.7,67.2 Z" />
+    <!-- red magnet -->
+    <path
+        android:fillColor="#D9483B"
+        android:pathData="M48,53 m-4.5,0 a4.5,4.5 0 1,0 9,0 a4.5,4.5 0 1,0 -9,0" />
+    <!-- small blue magnet on the freezer -->
+    <path
+        android:fillColor="#3E7CB1"
+        android:pathData="M42,34 m-3.5,0 a3.5,3.5 0 1,0 7,0 a3.5,3.5 0 1,0 -7,0" />
+</vector>

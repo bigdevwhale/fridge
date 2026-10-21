@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Холодильник</string>
+
+    <!-- Who's who -->
+    <string name="me">Я</string>
+    <string name="them">Половинка</string>
+
+    <!-- The strip above the fridge -->
+    <string name="status_together">%1$s рядом · всё появляется сразу</string>
+    <string name="status_waiting">Ждём второй телефон…</string>
+    <string name="status_alone">Пока этот холодильник только ваш</string>
+    <string name="status_paired">Встретитесь дома, в одной Wi-Fi сети</string>
+    <string name="status_last_met">Последняя встреча: %1$s</string>
+    <string name="ago_now">только что</string>
+    <string name="ago_min">%1$d мин назад</string>
+    <string name="ago_hours">%1$d ч назад</string>
+    <string name="ago_days">%1$d дн. назад</string>
+    <string name="pair_short">Познакомить телефоны</string>
+    <string name="settings">Настройки</string>
+    <string name="add">Повесить что-нибудь</string>
+    <string name="open_fridge">Открыть холодильник</string>
+
+    <!-- The freezer -->
+    <string name="plate_one">Холодильник</string>
+    <string name="plate_two">%1$s и %2$s</string>
+    <string name="weather_set">Ваша погода?</string>
+    <string name="weather_none">погоды пока нет</string>
+    <string name="weather_sun">Солнечно</string>
+    <string name="weather_partly">Переменная облачность</string>
+    <string name="weather_wind">Ветрено, неспокойно</string>
+    <string name="weather_fog">Туман</string>
+    <string name="weather_rain">Дождь</string>
+    <string name="weather_storm">Гроза</string>
+    <string name="weather_title">Ваша погода сегодня</string>
+    <string name="weather_sub">Как проходит день, без объяснений. Второй увидит это на двери.</string>
+    <string name="thanks_month">Спасибо в этом месяце: %1$d</string>
+    <string name="ask_hug">обними меня</string>
+    <string name="ask_quiet">мне нужна тишина</string>
+    <string name="ask_talk">поговори со мной</string>
+    <string name="ask_tea">сделай мне чаю</string>
+    <string name="ask_walk">пойдём погуляем</string>
+    <string name="ask_gentle">будь со мной бережнее сегодня</string>
+    <string name="asks_title">Попросить без слов</string>
+    <string name="asks_sub">Магнит со словами скажет это за вас.</string>
+    <string name="ask_mine">Ваш магнит на двери:</string>
+    <string name="ask_theirs">%1$s просит:</string>
+    <string name="ask_coming">Иду</string>
+    <string name="ask_answered">Отвечено</string>
+    <string name="ask_taken_off">Снято</string>
+
+    <!-- The main door -->
+    <string name="pad_title">Купить</string>
+    <string name="pad_add">дописать…</string>
+    <string name="pad_clear">Убрать вычеркнутое</string>
+    <string name="pad_jars">Всегда нужное, тап — и снова в списке:</string>
+    <string name="pad_staple">Всегда нужное</string>
+    <string name="pad_unstaple">Не всегда нужное</string>
+    <string name="remove">Убрать</string>
+    <string name="chores_title">Чья очередь</string>
+    <string name="chores_add">добавить дело…</string>
+    <string name="chores_tally">В этом месяце: %1$s</string>
+    <string name="chore_turn">Очередь: %1$s</string>
+    <string name="chore_done">Сделано</string>
+    <string name="chore_swap_mark">поменяемся?</string>
+    <string name="chore_swap_ask">Попросить поменяться</string>
+    <string name="chore_swap_cancel">Не надо меняться</string>
+    <string name="chore_swap_asked">%1$s просит поменяться.</string>
+    <string name="chore_swap_yes">Давай, сделаю</string>
+    <string name="chore_swap_no">Не сейчас</string>
+    <string name="chore_remove">Снять с карточки</string>
+    <string name="hideout">Тайник</string>
+    <string name="door_empty">Пустая дверца. Повесьте первую записку красным магнитом внизу.</string>
+
+    <!-- Papers -->
+    <string name="envelope_from">Конверт · %1$s</string>
+    <string name="envelope_opened">открыт вдвоём</string>
+    <string name="envelope_opened_on">Открыт вдвоём, %1$s</string>
+    <string name="envelope_hold">Положите палец на печать. Конверт откроется, когда %1$s сделает то же самое на своём телефоне.</string>
+    <string name="envelope_you_hold">Вы держите печать. Ждём, пока %1$s приложит палец…</string>
+    <string name="envelope_they_hold">%1$s держит печать. Приложите палец и вы.</string>
+    <string name="envelope_opening">Вдвоём. Открываем…</string>
+    <string name="envelope_apart">Конверт открывается только вдвоём: оба телефона дома, в одной Wi-Fi сети, и холодильник открыт на обоих.</string>
+    <string name="envelope_unpaired">Конверт открывается только вдвоём. Сначала познакомьте телефоны.</string>
+    <string name="worry_back">На обороте что-то есть</string>
+    <string name="worry_from">%1$s хочет поговорить</string>
+    <string name="worry_turned">перевёрнута</string>
+    <string name="worry_talk">Записка перевёрнута. Поговорите, а потом снимите её.</string>
+    <string name="worry_talked">Поговорили</string>
+    <string name="worry_waits">Висит лицом вниз. %1$s перевернёт её, когда сможет по-настоящему выслушать.</string>
+    <string name="worry_waits_alone">Висит лицом вниз и ждёт второй телефон.</string>
+    <string name="worry_wants">%1$s хочет о чём-то поговорить.</string>
+    <string name="worry_wants_sub">Записка висит лицом вниз, пока вы не готовы по-настоящему выслушать. Не на бегу в дверях.</string>
+    <string name="worry_ready">Сейчас могу выслушать</string>
+    <string name="worry_not_now">Не сейчас</string>
+    <string name="note_morning_mark">утром</string>
+    <string name="heart_on">Поставить сердечко</string>
+    <string name="heart_off">Убрать сердечко</string>
+    <string name="take_off">Снять с двери</string>
+    <string name="hang_again">Повесить обратно</string>
+    <string name="throw_away">Выбросить</string>
+    <string name="thanks_from">%1$s · %2$s</string>
+
+    <!-- Hanging something -->
+    <string name="add_title">Что повесить?</string>
+    <string name="add_note">Записка</string>
+    <string name="add_note_sub">о чём угодно</string>
+    <string name="add_morning">Записка на утро</string>
+    <string name="add_morning_sub">появится в шесть</string>
+    <string name="add_worry">Лицом вниз</string>
+    <string name="add_worry_sub">есть о чём поговорить</string>
+    <string name="add_envelope">Конверт</string>
+    <string name="add_envelope_sub">открывается только вдвоём</string>
+    <string name="add_ask">Просьба без слов</string>
+    <string name="add_ask_sub">обними, чай, тишина…</string>
+    <string name="add_weather">Погода дня</string>
+    <string name="add_weather_sub">как проходит день</string>
+    <string name="add_thanks">Спасибо</string>
+    <string name="add_thanks_sub">магнитик на морозилке</string>
+    <string name="add_drawing">Рисунок</string>
+    <string name="add_drawing_sub">корявость приветствуется</string>
+    <string name="add_trip">Магнит из поездки</string>
+    <string name="add_trip_sub">где вы были вместе</string>
+    <string name="add_wish">В тайник</string>
+    <string name="add_wish_sub">желание, по секрету</string>
+    <string name="write_note_sub">На бумажке, под магнитом.</string>
+    <string name="write_note_hint">пишите здесь…</string>
+    <string name="write_morning_sub">Второй увидит её только утром, с шести.</string>
+    <string name="write_morning_hint">доброе утро…</string>
+    <string name="write_worry_sub">Она повиснет лицом вниз. Второй увидит только, что что-то есть, и перевернёт, когда сможет по-настоящему выслушать.</string>
+    <string name="write_worry_hint">что на душе…</string>
+    <string name="write_worry_once">Сегодня вы уже вешали записку лицом вниз. Одна в день: для настоящего.</string>
+    <string name="write_envelope_sub">Признание в запечатанном конверте. Он откроется, только когда вы оба одновременно приложите пальцы к печати, каждый на своём телефоне.</string>
+    <string name="write_envelope_hint">то, что давно хотелось сказать…</string>
+    <string name="write_thanks_sub">Маленький круглый магнит на морозилке. За месяц их набирается россыпь.</string>
+    <string name="write_thanks_hint">спасибо, что…</string>
+    <string name="draw_sub">Рисуйте пальцем. На листке в клетку, как в школе.</string>
+    <string name="trip_sub">Сувенирный магнит для морозилки.</string>
+    <string name="trip_place">где вы были?</string>
+    <string name="trip_photo">Добавить фото на оборот</string>
+    <string name="trip_photo_change">Другое фото</string>
+    <string name="hang">Повесить</string>
+    <string name="seal">Запечатать</string>
+    <string name="cancel">Отмена</string>
+    <string name="undo">Отменить</string>
+    <string name="ok">ОК</string>
+    <string name="back">Назад</string>
+
+    <!-- The hideout -->
+    <string name="wishes_sub">Ваши желания и желания второго. Отметка на чужом желании автору не видна, так что подарок останется сюрпризом.</string>
+    <string name="wishes_theirs">Желания: %1$s</string>
+    <string name="wishes_theirs_empty">пока пусто</string>
+    <string name="wishes_got">беру на себя</string>
+    <string name="wishes_mine">Ваши желания</string>
+    <string name="wishes_add">добавить желание…</string>
+
+    <!-- Inside -->
+    <string name="inside">Внутри холодильника</string>
+    <string name="inside_weather">Погода за пять недель</string>
+    <string name="inside_chores">Дела по месяцам</string>
+    <string name="inside_thanks">Спасибо</string>
+    <string name="inside_off">Снятое с двери</string>
+    <string name="inside_off_empty">Пока ничего. Всё, что снято с двери, хранится здесь.</string>
+    <string name="inside_off_month">Снято: %1$s</string>
+
+    <!-- Pairing -->
+    <string name="pair_title">Познакомить телефоны</string>
+    <string name="pair_how">Один телефон показывает код, второй его сканирует. Вот и всё, и только один раз. Потом телефоны сами сверяют дверцу, когда оказываются в одной Wi-Fi сети, то есть дома.</string>
+    <string name="pair_show">Показать мой код</string>
+    <string name="pair_scan">Сканировать код</string>
+    <string name="pair_privacy">Без аккаунта и сервера. В коде ключ, который знают только ваши два телефона; всё между ними им зашифровано.</string>
+    <string name="pair_already">Этот телефон знаком с: %1$s. Новое знакомство заменит его.</string>
+    <string name="pair_bad">Это не код холодильника. Попробуйте ещё раз.</string>
+    <string name="pair_show_how">Наведите сюда камеру второго телефона.</string>
+    <string name="pair_qr">Код знакомства</string>
+    <string name="pair_wifi">После сканирования телефоны найдут друг друга в одной Wi-Fi сети.</string>
+    <string name="pair_scanned">Телефоны знакомы: %1$s</string>
+    <string name="pair_met">%1$s на связи</string>
+    <string name="pair_after">Теперь дверца общая. Новое переезжает, когда оба телефона дома в одной Wi-Fi сети, а пока приложение открыто на обоих, сразу.</string>
+    <string name="pair_show_again">Показать код снова</string>
+    <string name="to_door">К дверце</string>
+
+    <!-- Settings -->
+    <string name="set_you">Вы</string>
+    <string name="set_you_sub">Имя, которым вы подписываете записки.</string>
+    <string name="set_partner">Второй телефон</string>
+    <string name="set_paired">Знакомы: %1$s.</string>
+    <string name="set_unpaired">Пока не знакомы. Дверца работает и в одиночку.</string>
+    <string name="set_repair">Познакомить заново</string>
+    <string name="set_forget">Забыть телефон</string>
+    <string name="forget_title">Забыть второй телефон?</string>
+    <string name="forget_text">Всё на дверце останется, но между телефонами ничего не будет переезжать, пока вы не познакомите их снова.</string>
+    <string name="set_hum">Гудеть в фоне</string>
+    <string name="set_hum_sub">Холодильник слушает второй телефон дома, даже когда приложение закрыто: записки уже здесь, когда вы посмотрите, и приходит тихое уведомление. Тратит немного батареи.</string>
+    <string name="set_hum_switch">Слушать дома</string>
+    <string name="set_parcel">Посылка</string>
+    <string name="set_parcel_sub">Если вы порознь: вся дверца одним зашифрованным файлом. Отправьте через любой мессенджер; открыть его сможет только второй телефон.</string>
+    <string name="parcel_send">Отправить посылку</string>
+    <string name="parcel_open">Открыть посылку</string>
+    <string name="parcel_took">Распаковано: новых или изменённых — %1$d.</string>
+    <string name="parcel_nothing">Распаковано: ничего нового.</string>
+    <string name="parcel_not_ours">Эта посылка не для этого холодильника.</string>
+    <string name="parcel_own">Это посылка с этого же телефона.</string>
+    <string name="language">Язык</string>
+    <string name="lang_system">Системный</string>
+    <string name="lang_en">English</string>
+    <string name="lang_ru">Русский</string>
+    <string name="about">О приложении</string>
+    <string name="about_text">Дверца холодильника на двоих. Без аккаунта, облака, рекламы и аналитики: два телефона говорят друг с другом напрямую, в вашей Wi-Fi сети, и всё зашифровано ключом, который никуда не уходит.</string>
+
+    <!-- Welcome -->
+    <string name="welcome_title">Холодильник на двоих</string>
+    <string name="welcome_1">Список покупок, чья очередь, записки, просьбы без слов, тревоги и признания — всё на одной дверце.</string>
+    <string name="welcome_2">Телефоны знакомятся один раз по QR-коду, а потом сами сверяются, когда вы оба дома. Без сервера и аккаунта.</string>
+    <string name="welcome_3">Кое-что открывается только вдвоём.</string>
+    <string name="welcome_name">Ваше имя</string>
+    <string name="welcome_name_hint">чтобы подписывать записки</string>
+    <string name="welcome_go">Повесить дверцу</string>
+
+    <!-- Notifications -->
+    <string name="channel_hum">Слушает дома</string>
+    <string name="channel_news">Новое на двери</string>
+    <string name="hum_title">Холодильник гудит</string>
+    <string name="hum_text">Слушает второй телефон дома</string>
+    <string name="news_title">%1$s: новое на двери</string>
+    <string name="news_note">записка</string>
+    <string name="news_worry">что-то лицом вниз</string>
+    <string name="news_envelope">конверт</string>
+    <string name="news_drawing">рисунок</string>
+    <string name="news_thanks">спасибо</string>
+    <string name="news_trip">магнит из поездки</string>
+    <string name="news_ask">просьба</string>
+    <string name="news_chore">дело</string>
+    <string name="news_groceries">купить: %1$s</string>
+</resources>

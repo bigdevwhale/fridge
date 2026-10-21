@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A round magnet holding a corner of paper, for the status bar. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M5,8 L19,7 L20,21 L6,22 Z M8,13 L16,12.4 L16.1,13.6 L8.1,14.2 Z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M12,6 m-4,0 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0" />
+</vector>

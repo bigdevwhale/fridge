@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fridge</string>
+
+    <!-- Who's who -->
+    <string name="me">Me</string>
+    <string name="them">The other one</string>
+
+    <!-- The strip above the fridge -->
+    <string name="status_together">%1$s is here · everything shows up at once</string>
+    <string name="status_waiting">Waiting for the other phone…</string>
+    <string name="status_alone">For now this fridge is only yours</string>
+    <string name="status_paired">You\'ll meet at home, on the same Wi-Fi</string>
+    <string name="status_last_met">Last together: %1$s</string>
+    <string name="ago_now">just now</string>
+    <string name="ago_min">%1$d min ago</string>
+    <string name="ago_hours">%1$d h ago</string>
+    <string name="ago_days">%1$d d ago</string>
+    <string name="pair_short">Pair the phones</string>
+    <string name="settings">Settings</string>
+    <string name="add">Hang something</string>
+    <string name="open_fridge">Open the fridge</string>
+
+    <!-- The freezer -->
+    <string name="plate_one">Fridge</string>
+    <string name="plate_two">%1$s &amp; %2$s</string>
+    <string name="weather_set">Your weather?</string>
+    <string name="weather_none">no weather yet</string>
+    <string name="weather_sun">Sunny</string>
+    <string name="weather_partly">Partly cloudy</string>
+    <string name="weather_wind">Windy, restless</string>
+    <string name="weather_fog">Foggy</string>
+    <string name="weather_rain">Rainy</string>
+    <string name="weather_storm">Thunderstorm</string>
+    <string name="weather_title">Your weather today</string>
+    <string name="weather_sub">How the day is going, without having to explain. The other one will see it on the door.</string>
+    <string name="thanks_month">Thank-yous this month: %1$d</string>
+    <string name="ask_hug">hug me</string>
+    <string name="ask_quiet">I need some quiet</string>
+    <string name="ask_talk">talk to me</string>
+    <string name="ask_tea">make me tea</string>
+    <string name="ask_walk">let\'s go for a walk</string>
+    <string name="ask_gentle">be gentle with me today</string>
+    <string name="asks_title">Ask without words</string>
+    <string name="asks_sub">A word magnet on the door says it for you.</string>
+    <string name="ask_mine">Your magnet on the door:</string>
+    <string name="ask_theirs">%1$s asks:</string>
+    <string name="ask_coming">On my way</string>
+    <string name="ask_answered">Answered</string>
+    <string name="ask_taken_off">Taken off</string>
+
+    <!-- The main door -->
+    <string name="pad_title">To buy</string>
+    <string name="pad_add">add a line…</string>
+    <string name="pad_clear">Clear crossed out</string>
+    <string name="pad_jars">Staples, one tap to put back:</string>
+    <string name="pad_staple">Make it a staple</string>
+    <string name="pad_unstaple">Not a staple</string>
+    <string name="remove">Remove</string>
+    <string name="chores_title">Whose turn</string>
+    <string name="chores_add">add a chore…</string>
+    <string name="chores_tally">This month: %1$s</string>
+    <string name="chore_turn">Turn: %1$s</string>
+    <string name="chore_done">Done</string>
+    <string name="chore_swap_mark">swap?</string>
+    <string name="chore_swap_ask">Ask to swap</string>
+    <string name="chore_swap_cancel">Never mind the swap</string>
+    <string name="chore_swap_asked">%1$s asks to swap this one.</string>
+    <string name="chore_swap_yes">Sure, I\'ll do it</string>
+    <string name="chore_swap_no">Not now</string>
+    <string name="chore_remove">Take it off the card</string>
+    <string name="hideout">Hideout</string>
+    <string name="door_empty">An empty door. Hang the first note with the red magnet below.</string>
+
+    <!-- Papers -->
+    <string name="envelope_from">from %1$s</string>
+    <string name="envelope_opened">opened together</string>
+    <string name="envelope_opened_on">Opened together, %1$s</string>
+    <string name="envelope_hold">Put your finger on the seal. It opens when %1$s does the same on their phone.</string>
+    <string name="envelope_you_hold">You\'re holding the seal. Waiting for %1$s…</string>
+    <string name="envelope_they_hold">%1$s is holding the seal. Put your finger on it too.</string>
+    <string name="envelope_opening">Both of you. Opening…</string>
+    <string name="envelope_apart">An envelope opens only together, with both phones at home on the same Wi-Fi and the fridge open on each.</string>
+    <string name="envelope_unpaired">An envelope opens only together. Pair the phones first.</string>
+    <string name="worry_back">There\'s something on the other side</string>
+    <string name="worry_from">%1$s would like to talk</string>
+    <string name="worry_turned">turned over</string>
+    <string name="worry_talk">It\'s turned over now. Talk it through, and take it off when you have.</string>
+    <string name="worry_talked">We talked</string>
+    <string name="worry_waits">Hanging face down. %1$s will turn it over when they can really listen.</string>
+    <string name="worry_waits_alone">Hanging face down, waiting for the other phone.</string>
+    <string name="worry_wants">%1$s would like to talk about something.</string>
+    <string name="worry_wants_sub">The note stays face down until you\'re ready to really listen, not on the way out the door.</string>
+    <string name="worry_ready">I\'m ready to listen</string>
+    <string name="worry_not_now">Not right now</string>
+    <string name="note_morning_mark">in the morning</string>
+    <string name="heart_on">Put a heart on it</string>
+    <string name="heart_off">Take the heart off</string>
+    <string name="take_off">Take it off the door</string>
+    <string name="hang_again">Hang it back</string>
+    <string name="throw_away">Throw it away</string>
+    <string name="thanks_from">%1$s · %2$s</string>
+
+    <!-- Hanging something -->
+    <string name="add_title">What would you like to hang?</string>
+    <string name="add_note">A note</string>
+    <string name="add_note_sub">anything at all</string>
+    <string name="add_morning">A note for the morning</string>
+    <string name="add_morning_sub">shows up at six</string>
+    <string name="add_worry">Face down</string>
+    <string name="add_worry_sub">something to talk about</string>
+    <string name="add_envelope">An envelope</string>
+    <string name="add_envelope_sub">opened only together</string>
+    <string name="add_ask">Ask without words</string>
+    <string name="add_ask_sub">hug me, tea, quiet…</string>
+    <string name="add_weather">Today\'s weather</string>
+    <string name="add_weather_sub">how the day is going</string>
+    <string name="add_thanks">Thank you</string>
+    <string name="add_thanks_sub">a magnet on the freezer</string>
+    <string name="add_drawing">A drawing</string>
+    <string name="add_drawing_sub">crooked is welcome</string>
+    <string name="add_trip">A trip magnet</string>
+    <string name="add_trip_sub">a place you\'ve been together</string>
+    <string name="add_wish">Into the hideout</string>
+    <string name="add_wish_sub">a wish, quietly</string>
+    <string name="write_note_sub">On paper, under a magnet.</string>
+    <string name="write_note_hint">write here…</string>
+    <string name="write_morning_sub">The other one sees it only in the morning, from six.</string>
+    <string name="write_morning_hint">good morning…</string>
+    <string name="write_worry_sub">It hangs face down. The other one sees only that there is something, and turns it over when they can really listen.</string>
+    <string name="write_worry_hint">what\'s on your mind…</string>
+    <string name="write_worry_once">You\'ve already hung one face down today. One a day: for the real things.</string>
+    <string name="write_envelope_sub">A confession in a sealed envelope. It opens only with both of your fingers on the seal at the same time, each on your own phone.</string>
+    <string name="write_envelope_hint">what you\'ve wanted to say…</string>
+    <string name="write_thanks_sub">A small round magnet on the freezer. They gather over the month.</string>
+    <string name="write_thanks_hint">thank you for…</string>
+    <string name="draw_sub">Draw with your finger. On squared paper, like at school.</string>
+    <string name="trip_sub">A souvenir magnet for the freezer.</string>
+    <string name="trip_place">where were you?</string>
+    <string name="trip_photo">Add a photo for its back</string>
+    <string name="trip_photo_change">Another photo</string>
+    <string name="hang">Hang it</string>
+    <string name="seal">Seal it</string>
+    <string name="cancel">Cancel</string>
+    <string name="undo">Undo</string>
+    <string name="ok">OK</string>
+    <string name="back">Back</string>
+
+    <!-- The hideout -->
+    <string name="wishes_sub">Your wishes and theirs. A mark on theirs stays hidden from them, so a present stays a surprise.</string>
+    <string name="wishes_theirs">%1$s wishes</string>
+    <string name="wishes_theirs_empty">nothing here yet</string>
+    <string name="wishes_got">I\'ll see to it</string>
+    <string name="wishes_mine">Your wishes</string>
+    <string name="wishes_add">add a wish…</string>
+
+    <!-- Inside -->
+    <string name="inside">Inside the fridge</string>
+    <string name="inside_weather">Weather, five weeks</string>
+    <string name="inside_chores">Chores, by month</string>
+    <string name="inside_thanks">Thank-yous</string>
+    <string name="inside_off">Taken off the door</string>
+    <string name="inside_off_empty">Nothing yet. What you take off the door is kept here.</string>
+    <string name="inside_off_month">Taken off in %1$s</string>
+
+    <!-- Pairing -->
+    <string name="pair_title">Pair the phones</string>
+    <string name="pair_how">One phone shows a code, the other scans it. That\'s all, and only once. After that the two phones compare doors on their own whenever they\'re on the same Wi-Fi: at home.</string>
+    <string name="pair_show">Show my code</string>
+    <string name="pair_scan">Scan their code</string>
+    <string name="pair_privacy">No account and no server. The code holds a key only your two phones know; everything between them is encrypted with it.</string>
+    <string name="pair_already">This phone is paired with %1$s. Pairing again replaces it.</string>
+    <string name="pair_bad">That isn\'t a fridge code. Try once more.</string>
+    <string name="pair_show_how">Point the other phone\'s camera here.</string>
+    <string name="pair_qr">The pairing code</string>
+    <string name="pair_wifi">Once scanned, the two phones find each other on the same Wi-Fi.</string>
+    <string name="pair_scanned">Paired with %1$s</string>
+    <string name="pair_met">%1$s is here</string>
+    <string name="pair_after">From now on the door is shared. New things travel whenever both phones are at home on the same Wi-Fi, and right away while the app is open on both.</string>
+    <string name="pair_show_again">Show the code again</string>
+    <string name="to_door">To the door</string>
+
+    <!-- Settings -->
+    <string name="set_you">You</string>
+    <string name="set_you_sub">The name you sign notes with.</string>
+    <string name="set_partner">The other phone</string>
+    <string name="set_paired">Paired with %1$s.</string>
+    <string name="set_unpaired">Not paired yet. The door works on its own too.</string>
+    <string name="set_repair">Pair again</string>
+    <string name="set_forget">Forget the phone</string>
+    <string name="forget_title">Forget the other phone?</string>
+    <string name="forget_text">Everything stays on this door, but nothing will travel between the phones until you pair them again.</string>
+    <string name="set_hum">Hum in the background</string>
+    <string name="set_hum_sub">Keeps listening for the other phone at home with the app closed, so their notes are already here when you look, with a quiet notification. Uses a little battery.</string>
+    <string name="set_hum_switch">Listen at home</string>
+    <string name="set_parcel">A parcel</string>
+    <string name="set_parcel_sub">For when you\'re apart: the whole door as one encrypted file. Send it through any messenger; only the other phone can open it.</string>
+    <string name="parcel_send">Send a parcel</string>
+    <string name="parcel_open">Open a parcel</string>
+    <string name="parcel_took">New or changed on unpacking: %1$d.</string>
+    <string name="parcel_nothing">Unpacked: nothing new.</string>
+    <string name="parcel_not_ours">That parcel isn\'t for this fridge.</string>
+    <string name="parcel_own">That\'s this phone\'s own parcel.</string>
+    <string name="language">Language</string>
+    <string name="lang_system">System</string>
+    <string name="lang_en">English</string>
+    <string name="lang_ru">Русский</string>
+    <string name="about">About</string>
+    <string name="about_text">A fridge door for two. No account, no cloud, no ads, no analytics: the two phones talk to each other directly, on your own Wi-Fi, encrypted with a key that never leaves them.</string>
+
+    <!-- Welcome -->
+    <string name="welcome_title">A fridge for two</string>
+    <string name="welcome_1">The shopping list, whose turn it is, notes, asks without words, worries and confessions, all on one door.</string>
+    <string name="welcome_2">The phones are paired once with a QR code, then compare doors on their own whenever you\'re both at home. No server, no account.</string>
+    <string name="welcome_3">Some things open only together.</string>
+    <string name="welcome_name">Your name</string>
+    <string name="welcome_name_hint">to sign notes with</string>
+    <string name="welcome_go">Hang the door</string>
+
+    <!-- Notifications -->
+    <string name="channel_hum">Listening at home</string>
+    <string name="channel_news">New on the door</string>
+    <string name="hum_title">The fridge is humming</string>
+    <string name="hum_text">Listening for the other phone at home</string>
+    <string name="news_title">On the door from %1$s</string>
+    <string name="news_note">a note</string>
+    <string name="news_worry">something face down</string>
+    <string name="news_envelope">an envelope</string>
+    <string name="news_drawing">a drawing</string>
+    <string name="news_thanks">a thank-you</string>
+    <string name="news_trip">a trip magnet</string>
+    <string name="news_ask">an ask</string>
+    <string name="news_chore">a chore</string>
+    <string name="news_groceries">to buy: %1$s</string>
+</resources>
