@@ -6,6 +6,13 @@ line "<!-- tg", then 2-4 short lines in Russian for users (what is new, what is 
 then close it like any HTML comment. The release notes carry it, and the chat bot posts those lines.
 -->
 
+## [1.0.1] - 2026-10-25
+
+### Added
+- Community links in settings: report a bug, suggest an idea or follow updates through the StillCraft bot on Telegram, and the StillCraft chat.
+
+<!-- tg skip -->
+
 ## [1.0.0]
 
 - First release: a fridge door for two. The freezer holds a nameplate, today's weather for each of you, asks without words, thank-you magnets and trip magnets. The main door holds the shopping pad with staples, whose turn with swaps and a monthly tally, notes and morning notes, worries hung face down, envelopes that open only with both fingers on the seal, drawings, and the hideout of wishes.

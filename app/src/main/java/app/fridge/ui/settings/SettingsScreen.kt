@@ -48,6 +48,7 @@ import app.fridge.R
 import app.fridge.container
 import app.fridge.data.FridgeSettings
 import app.fridge.sync.Parcel
+import app.fridge.ui.components.CommunityLinks
 import app.fridge.ui.components.HandField
 import app.fridge.ui.components.InkButton
 import app.fridge.ui.components.Paper
@@ -185,6 +186,9 @@ fun SettingsScreen(settings: FridgeSettings, onBack: () -> Unit, onPair: () -> U
                     ) { Text(stringResource(label), style = t.label, color = if (on) Color.White else p.ink) }
                 }
             }
+
+            SectionTitle(stringResource(R.string.community), stringResource(R.string.community_text))
+            CommunityLinks()
 
             SectionTitle(stringResource(R.string.about))
             Text(stringResource(R.string.about_text), style = t.body, color = p.muted)
